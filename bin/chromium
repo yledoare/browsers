@@ -1,0 +1,8 @@
+[ -e /home/linuxconsole2023/browsers/usr/lib64/chromium ] && CHROMIUM=/home/linuxconsole2023/browsers/usr/lib64/chromium/chromium
+[ -e /home/linuxconsole2023/browsers/usr/lib/chromium ] && CHROMIUM=/home/linuxconsole2023/browsers/usr/lib/chromium/chromium
+if [ "$USER" = "root" ]
+then
+  $CHROMIUM --no-sandbox "$@"
+else
+  $CHROMIUM "$@"
+fi
