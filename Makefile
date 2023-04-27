@@ -1,7 +1,4 @@
-ifeq (${MYPREFIX},"")
-	echo "Myprofix not set !"
-endif
-DESTDIR		?= $(HOME)/.local
+MYPREFIX	?= $(HOME)/.local
 PREFIX		?= $(MYPREFIX)
 all:
 install:
